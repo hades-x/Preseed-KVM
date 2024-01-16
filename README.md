@@ -1,7 +1,5 @@
-
-Bien sûr, je vais vous aider à rédiger un fichier README pour expliquer l'utilité de ces trois fichiers présents dans votre dépôt GitHub. Voici une ébauche de ce que pourrait être votre fichier README :
-
 README
+
 Description du Projet
 Ce projet contient un ensemble de scripts pour automatiser la création, la configuration et la suppression d'une machine virtuelle Debian. Le projet comprend trois fichiers principaux :
 
