@@ -1,53 +1,53 @@
 README
-
-Description du Projet
-Ce projet contient un ensemble de scripts pour automatiser la création, la configuration et la suppression d'une machine virtuelle Debian. Le projet comprend trois fichiers principaux :
+Project Description
+This project contains a set of scripts to automate the creation, configuration, and deletion of a Debian virtual machine. The project includes three main files:
 
 vminstall.sh
 preseed.cfg
 des-und.sh
-Ces scripts facilitent la mise en place rapide d'une VM Debian avec une configuration spécifique, idéale pour les environnements de test ou de développement.
+These scripts facilitate the rapid setup of a Debian VM with a specific configuration, ideal for test or development environments.
 
-Fichiers
+Files
 vminstall.sh
-Ce script utilise virt-install pour créer une machine virtuelle Debian. Les paramètres incluent :
+This script uses virt-install to create a Debian virtual machine. The parameters include:
 
-Nom de la VM : deb-test
-Mémoire : 2048 Mo
-CPU : 2 cœurs
-Source : Image ISO de Debian (debian-12.iso)
-Variant de l'OS : Debian 10
-Disque : 10 Go, format qcow2
-Réseau : Configuration par défaut
-Injection du fichier preseed.cfg pour automatiser l'installation
+VM Name: deb-test
+Memory: 2048 MB
+CPU: 2 cores
+Source: Debian ISO Image (debian-12.iso)
+OS Variant: Debian 10
+Disk: 10 GB, qcow2 format
+Network: Default configuration
+Injection of the preseed.cfg file to automate installation
 preseed.cfg
-Ce fichier de préconfiguration pour l'installateur Debian automatise le processus d'installation. Les paramètres configurés incluent :
+This preconfiguration file for the Debian installer automates the installation process. Configured parameters include:
 
-Langue, disposition du clavier, et fuseau horaire
-Informations de l'utilisateur root
-Configuration du réseau et du nom d'hôte
-Partitionnement du disque
-Installation de SSH et d'un serveur web
-Configuration des dépôts Debian et installation des paquets nécessaires
-Configuration de GRUB
+Language, keyboard layout, and time zone
+Root user information
+Network configuration and hostname
+Disk partitioning
+SSH and web server installation
+Configuration of Debian repositories and installation of necessary packages
+GRUB configuration
 des-und.sh
-Ce script nettoie l'environnement après les tests. Il :
+This script cleans up the environment after testing. It:
 
-Détruit la VM deb-test
-Supprime la définition de la VM
-Supprime le fichier disque de la VM
-Utilisation
-Installation de la VM
-Pour créer la VM :
+Destroys the VM deb-test
+Removes the VM definition
+Deletes the VM disk file
+Usage
+VM Installation
+To create the VM:
 
-Assurez-vous que virt-install et les outils connexes sont installés sur votre système.
-Exécutez le script vminstall.sh avec les privilèges appropriés.
-Suppression de la VM
-Pour supprimer la VM :
+Ensure that virt-install and related tools are installed on your system.
+Run the vminstall.sh script with appropriate privileges.
+VM Deletion
+To delete the VM:
 
-Exécutez le script des-und.sh.
-Prérequis
-KVM/QEMU installé sur votre système.
-Les images ISO de Debian doivent être téléchargées et accessibles par le script vminstall.sh.
+Run the des-und.sh script.
+Prerequisites
+KVM/QEMU installed on your system.
+Debian ISO images must be downloaded and accessible by the vminstall.sh script.
 Contributions
-Les contributions à ce projet sont les bienvenues. Pour proposer des améliorations ou des corrections, veuillez ouvrir une issue ou une pull request.
+Contributions to this project are welcome. To propose improvements or corrections, please open an issue or a pull request.
+
